@@ -1,0 +1,73 @@
+{
+  "name": "node-oyster",
+  "version": "0.0.0",
+  "description": "oyster",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "bluebird": "~1.0.4",
+    "knex": "~0.5.0",
+    "lodash": "~2.4.1",
+    "moment": "~2.4.0",
+    "mongodb": "~1.3.23",
+    "murmurhash": "~0.0.2",
+    "mysql": "~2.0.0-rc2",
+    "redis": "~0.9.1",
+    "request": "~2.33.0",
+    "scrypt": "~1.7.4",
+    "socket.io": "~0.9.16",
+    "winston": "~0.7.2",
+    "grunt-shell": "~0.6.4",
+    "hashring": "~1.0.3",
+    "bookshelf": "~0.6.4",
+    "hold": "0.0.6",
+    "elasticsearch": "~1.5.10",
+    "dateformat": "~1.0.7-1.2.3"
+  },
+  "devDependencies": {
+    "grunt-cli": "~0.1.11",
+    "grunt": "~0.4.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "mocha": "~1.16.2",
+    "grunt-contrib-jshint": "~0.8.0",
+    "sinon": "~1.7.3",
+    "supertest": "~0.8.2",
+    "chai-as-promised": "~4.1.0",
+    "grunt-mocha-test": "~0.8.1",
+    "jshint-stylish": "~0.1.5",
+    "grunt-newer": "~0.6.1",
+    "load-grunt-tasks": "~0.3.0",
+    "time-grunt": "~0.2.9",
+    "grunt-concurrent": "~0.4.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mideveloper/oyster"
+  },
+  "keywords": [
+    "node",
+    "javascript",
+    "framework",
+    "standard",
+    "node",
+    "app",
+    "general",
+    "node",
+    "app",
+    "structure"
+  ],
+  "author": {
+    "name": "mideveloper"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mideveloper/oyster/issues"
+  },
+  "homepage": "https://github.com/mideveloper/oyster",
+  "readme": "oyster\n=====\n\noyster framework\n",
+  "readmeFilename": "README.md",
+  "_id": "node-oyster@0.0.1",
+  "_from": "node-oyster@"
+}
