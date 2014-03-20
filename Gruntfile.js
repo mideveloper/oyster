@@ -33,7 +33,7 @@ module.exports = function(grunt) {
                 globals: ["should"],
                 timeout: 10000,
                 ui: "bdd",
-                reporter: "dot"
+                reporter: "spec"
             },
             all: {
                 src: ["tests/**/*.js"]
