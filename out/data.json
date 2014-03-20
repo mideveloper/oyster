@@ -1,0 +1,380 @@
+{
+    "project": {},
+    "files": {
+        "lib/utils/epoch.js": {
+            "name": "lib/utils/epoch.js",
+            "modules": {},
+            "classes": {
+                "Epoch": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "Epoch": {
+            "name": "Epoch",
+            "shortname": "Epoch",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "lib/utils/epoch.js",
+            "line": 1,
+            "description": "This is the description for my class.",
+            "is_constructor": 1
+        }
+    },
+    "classitems": [
+        {
+            "file": "lib/utils/epoch.js",
+            "line": 8,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "getNow",
+            "return": {
+                "description": "Current DateTime in Epoch"
+            },
+            "class": "Epoch"
+        },
+        {
+            "file": "lib/utils/epoch.js",
+            "line": 18,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "getYearsSince",
+            "params": [
+                {
+                    "name": "epoch",
+                    "description": "",
+                    "type": "Number (should be datetime in epoch)"
+                }
+            ],
+            "return": {
+                "description": "years"
+            },
+            "class": "Epoch"
+        },
+        {
+            "file": "lib/utils/epoch.js",
+            "line": 32,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "addMinutes",
+            "params": [
+                {
+                    "name": "epoch",
+                    "description": ""
+                },
+                {
+                    "name": "m",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "da"
+            },
+            "class": "Epoch"
+        },
+        {
+            "file": "lib/utils/epoch.js",
+            "line": 45,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "addSeconds",
+            "params": [
+                {
+                    "name": "epoch",
+                    "description": ""
+                },
+                {
+                    "name": "m",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "da"
+            },
+            "class": "Epoch"
+        },
+        {
+            "file": "lib/utils/epoch.js",
+            "line": 58,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "subtractMinutes",
+            "params": [
+                {
+                    "name": "epoch",
+                    "description": ""
+                },
+                {
+                    "name": "m",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "da"
+            },
+            "class": "Epoch"
+        },
+        {
+            "file": "lib/utils/epoch.js",
+            "line": 71,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "subtractDays",
+            "params": [
+                {
+                    "name": "epoch",
+                    "description": ""
+                },
+                {
+                    "name": "_d",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "da"
+            },
+            "class": "Epoch"
+        },
+        {
+            "file": "lib/utils/epoch.js",
+            "line": 84,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "addDays",
+            "params": [
+                {
+                    "name": "epoch",
+                    "description": ""
+                },
+                {
+                    "name": "_d",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "da"
+            },
+            "class": "Epoch"
+        },
+        {
+            "file": "lib/utils/epoch.js",
+            "line": 97,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "addYears",
+            "params": [
+                {
+                    "name": "epoch",
+                    "description": ""
+                },
+                {
+                    "name": "m",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "da"
+            },
+            "class": "Epoch"
+        },
+        {
+            "file": "lib/utils/epoch.js",
+            "line": 110,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "isInFuture",
+            "params": [
+                {
+                    "name": "epoch",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": "Epoch"
+        },
+        {
+            "file": "lib/utils/epoch.js",
+            "line": 127,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "isInPast",
+            "params": [
+                {
+                    "name": "epoch",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": ""
+            },
+            "class": "Epoch"
+        },
+        {
+            "file": "lib/utils/epoch.js",
+            "line": 144,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "getMillisecondsSince",
+            "params": [
+                {
+                    "name": "epoch",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "seconds"
+            },
+            "class": "Epoch"
+        },
+        {
+            "file": "lib/utils/epoch.js",
+            "line": 158,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "getSecondsSince",
+            "params": [
+                {
+                    "name": "epoch",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "seconds"
+            },
+            "class": "Epoch"
+        },
+        {
+            "file": "lib/utils/epoch.js",
+            "line": 172,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "getMinutesSince",
+            "params": [
+                {
+                    "name": "epoch",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "minutes"
+            },
+            "class": "Epoch"
+        },
+        {
+            "file": "lib/utils/epoch.js",
+            "line": 186,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "getHoursSince",
+            "params": [
+                {
+                    "name": "utcDate",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "hours"
+            },
+            "class": "Epoch"
+        },
+        {
+            "file": "lib/utils/epoch.js",
+            "line": 200,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "getDaysSince",
+            "params": [
+                {
+                    "name": "utcDate",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "days"
+            },
+            "class": "Epoch"
+        },
+        {
+            "file": "lib/utils/epoch.js",
+            "line": 214,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "getMinDate",
+            "return": {
+                "description": "then"
+            },
+            "class": "Epoch"
+        },
+        {
+            "file": "lib/utils/epoch.js",
+            "line": 225,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "getMaxDate",
+            "return": {
+                "description": "then"
+            },
+            "class": "Epoch"
+        },
+        {
+            "file": "lib/utils/epoch.js",
+            "line": 236,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "fromEpoch",
+            "params": [
+                {
+                    "name": "epoch",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "BinaryExpression"
+            },
+            "class": "Epoch"
+        },
+        {
+            "file": "lib/utils/epoch.js",
+            "line": 247,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "toEpoch",
+            "params": [
+                {
+                    "name": "hammerTime",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "CallExpression"
+            },
+            "class": "Epoch"
+        },
+        {
+            "file": "lib/utils/epoch.js",
+            "line": 258,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "getEpochBeforeMinutes",
+            "params": [
+                {
+                    "name": "minutes",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "then"
+            },
+            "class": "Epoch"
+        }
+    ],
+    "warnings": []
+}
