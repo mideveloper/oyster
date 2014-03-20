@@ -1,6 +1,17 @@
 {
     "project": {},
     "files": {
+        "lib/utils/crypt.js": {
+            "name": "lib/utils/crypt.js",
+            "modules": {
+                "Util": 1
+            },
+            "classes": {
+                "Crypt": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
         "lib/utils/epoch.js": {
             "name": "lib/utils/epoch.js",
             "modules": {},
@@ -11,8 +22,38 @@
             "namespaces": {}
         }
     },
-    "modules": {},
+    "modules": {
+        "Util": {
+            "name": "Util",
+            "submodules": {},
+            "classes": {
+                "Crypt": 1,
+                "Epoch": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "lib/utils/epoch.js",
+            "line": 1,
+            "description": "This is the description for my class.",
+            "is_constructor": 1
+        }
+    },
     "classes": {
+        "Crypt": {
+            "name": "Crypt",
+            "shortname": "Crypt",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Util",
+            "namespace": "",
+            "file": "lib/utils/crypt.js",
+            "line": 1,
+            "description": "This is the description for my class."
+        },
         "Epoch": {
             "name": "Epoch",
             "shortname": "Epoch",
@@ -21,27 +62,69 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
+            "module": "Util",
+            "namespace": "",
             "file": "lib/utils/epoch.js",
             "line": 1,
-            "description": "This is the description for my class.",
-            "is_constructor": 1
+            "description": "This is the description for Epoch class."
         }
     },
     "classitems": [
         {
             "file": "lib/utils/epoch.js",
-            "line": 8,
+            "line": 9,
             "description": "Description",
             "itemtype": "method",
-            "name": "getNow",
+            "name": "abc",
             "return": {
                 "description": "Current DateTime in Epoch"
             },
-            "class": "Epoch"
+            "is_constructor": 1,
+            "class": "Epoch",
+            "module": "Util"
         },
         {
             "file": "lib/utils/epoch.js",
-            "line": 18,
+            "line": 16,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "cde",
+            "return": {
+                "description": "Current DateTime in Epoch"
+            },
+            "is_constructor": 1,
+            "class": "Epoch",
+            "module": "Util"
+        },
+        {
+            "file": "lib/utils/epoch.js",
+            "line": 23,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "lmg",
+            "return": {
+                "description": "Current DateTime in Epoch"
+            },
+            "is_constructor": 1,
+            "class": "Epoch",
+            "module": "Util"
+        },
+        {
+            "file": "lib/utils/epoch.js",
+            "line": 30,
+            "description": "Description",
+            "itemtype": "method",
+            "name": "asdfasdfasdf",
+            "return": {
+                "description": "Current DateTime in Epoch"
+            },
+            "is_constructor": 1,
+            "class": "Epoch",
+            "module": "Util"
+        },
+        {
+            "file": "lib/utils/epoch.js",
+            "line": 41,
             "description": "Description",
             "itemtype": "method",
             "name": "getYearsSince",
@@ -55,11 +138,12 @@
             "return": {
                 "description": "years"
             },
-            "class": "Epoch"
+            "class": "Epoch",
+            "module": "Util"
         },
         {
             "file": "lib/utils/epoch.js",
-            "line": 32,
+            "line": 55,
             "description": "Description",
             "itemtype": "method",
             "name": "addMinutes",
@@ -76,11 +160,12 @@
             "return": {
                 "description": "da"
             },
-            "class": "Epoch"
+            "class": "Epoch",
+            "module": "Util"
         },
         {
             "file": "lib/utils/epoch.js",
-            "line": 45,
+            "line": 68,
             "description": "Description",
             "itemtype": "method",
             "name": "addSeconds",
@@ -97,11 +182,12 @@
             "return": {
                 "description": "da"
             },
-            "class": "Epoch"
+            "class": "Epoch",
+            "module": "Util"
         },
         {
             "file": "lib/utils/epoch.js",
-            "line": 58,
+            "line": 81,
             "description": "Description",
             "itemtype": "method",
             "name": "subtractMinutes",
@@ -118,11 +204,12 @@
             "return": {
                 "description": "da"
             },
-            "class": "Epoch"
+            "class": "Epoch",
+            "module": "Util"
         },
         {
             "file": "lib/utils/epoch.js",
-            "line": 71,
+            "line": 94,
             "description": "Description",
             "itemtype": "method",
             "name": "subtractDays",
@@ -139,11 +226,12 @@
             "return": {
                 "description": "da"
             },
-            "class": "Epoch"
+            "class": "Epoch",
+            "module": "Util"
         },
         {
             "file": "lib/utils/epoch.js",
-            "line": 84,
+            "line": 107,
             "description": "Description",
             "itemtype": "method",
             "name": "addDays",
@@ -160,11 +248,12 @@
             "return": {
                 "description": "da"
             },
-            "class": "Epoch"
+            "class": "Epoch",
+            "module": "Util"
         },
         {
             "file": "lib/utils/epoch.js",
-            "line": 97,
+            "line": 120,
             "description": "Description",
             "itemtype": "method",
             "name": "addYears",
@@ -181,11 +270,12 @@
             "return": {
                 "description": "da"
             },
-            "class": "Epoch"
+            "class": "Epoch",
+            "module": "Util"
         },
         {
             "file": "lib/utils/epoch.js",
-            "line": 110,
+            "line": 133,
             "description": "Description",
             "itemtype": "method",
             "name": "isInFuture",
@@ -198,11 +288,12 @@
             "return": {
                 "description": ""
             },
-            "class": "Epoch"
+            "class": "Epoch",
+            "module": "Util"
         },
         {
             "file": "lib/utils/epoch.js",
-            "line": 127,
+            "line": 150,
             "description": "Description",
             "itemtype": "method",
             "name": "isInPast",
@@ -215,11 +306,12 @@
             "return": {
                 "description": ""
             },
-            "class": "Epoch"
+            "class": "Epoch",
+            "module": "Util"
         },
         {
             "file": "lib/utils/epoch.js",
-            "line": 144,
+            "line": 167,
             "description": "Description",
             "itemtype": "method",
             "name": "getMillisecondsSince",
@@ -232,11 +324,12 @@
             "return": {
                 "description": "seconds"
             },
-            "class": "Epoch"
+            "class": "Epoch",
+            "module": "Util"
         },
         {
             "file": "lib/utils/epoch.js",
-            "line": 158,
+            "line": 181,
             "description": "Description",
             "itemtype": "method",
             "name": "getSecondsSince",
@@ -249,11 +342,12 @@
             "return": {
                 "description": "seconds"
             },
-            "class": "Epoch"
+            "class": "Epoch",
+            "module": "Util"
         },
         {
             "file": "lib/utils/epoch.js",
-            "line": 172,
+            "line": 195,
             "description": "Description",
             "itemtype": "method",
             "name": "getMinutesSince",
@@ -266,11 +360,12 @@
             "return": {
                 "description": "minutes"
             },
-            "class": "Epoch"
+            "class": "Epoch",
+            "module": "Util"
         },
         {
             "file": "lib/utils/epoch.js",
-            "line": 186,
+            "line": 209,
             "description": "Description",
             "itemtype": "method",
             "name": "getHoursSince",
@@ -283,11 +378,12 @@
             "return": {
                 "description": "hours"
             },
-            "class": "Epoch"
+            "class": "Epoch",
+            "module": "Util"
         },
         {
             "file": "lib/utils/epoch.js",
-            "line": 200,
+            "line": 223,
             "description": "Description",
             "itemtype": "method",
             "name": "getDaysSince",
@@ -300,33 +396,36 @@
             "return": {
                 "description": "days"
             },
-            "class": "Epoch"
+            "class": "Epoch",
+            "module": "Util"
         },
         {
             "file": "lib/utils/epoch.js",
-            "line": 214,
+            "line": 237,
             "description": "Description",
             "itemtype": "method",
             "name": "getMinDate",
             "return": {
                 "description": "then"
             },
-            "class": "Epoch"
+            "class": "Epoch",
+            "module": "Util"
         },
         {
             "file": "lib/utils/epoch.js",
-            "line": 225,
+            "line": 248,
             "description": "Description",
             "itemtype": "method",
             "name": "getMaxDate",
             "return": {
                 "description": "then"
             },
-            "class": "Epoch"
+            "class": "Epoch",
+            "module": "Util"
         },
         {
             "file": "lib/utils/epoch.js",
-            "line": 236,
+            "line": 259,
             "description": "Description",
             "itemtype": "method",
             "name": "fromEpoch",
@@ -339,11 +438,12 @@
             "return": {
                 "description": "BinaryExpression"
             },
-            "class": "Epoch"
+            "class": "Epoch",
+            "module": "Util"
         },
         {
             "file": "lib/utils/epoch.js",
-            "line": 247,
+            "line": 270,
             "description": "Description",
             "itemtype": "method",
             "name": "toEpoch",
@@ -356,11 +456,12 @@
             "return": {
                 "description": "CallExpression"
             },
-            "class": "Epoch"
+            "class": "Epoch",
+            "module": "Util"
         },
         {
             "file": "lib/utils/epoch.js",
-            "line": 258,
+            "line": 281,
             "description": "Description",
             "itemtype": "method",
             "name": "getEpochBeforeMinutes",
@@ -373,7 +474,8 @@
             "return": {
                 "description": "then"
             },
-            "class": "Epoch"
+            "class": "Epoch",
+            "module": "Util"
         }
     ],
     "warnings": []
