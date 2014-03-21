@@ -53,6 +53,26 @@ describe("Mongo", function () {
 
     });
 
+    it("fetch with select clause one parameter", function () {
+        return new functionalTestModel({
+            _id: 1
+        }).fetch("_id").then(function (output) {
+            expect(output._id).to.equal(1);
+            expect(output.name).to.be.undefined;
+        });
+
+    });
+
+    it("fetch with select clause multiple parameters", function () {
+        return new functionalTestModel({
+            _id: 1
+        }).fetch("_id", "name").then(function (output) {
+            expect(output._id).to.equal(1);
+            expect(output.name).to.equal("ftest1");
+        });
+
+    });
+
     it("append single item to array", function () {
         return new functionalTestModel({
             array: "1"
