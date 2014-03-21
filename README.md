@@ -1,4 +1,4 @@
 oyster
 =====
 
-oyster framework
+oyster
