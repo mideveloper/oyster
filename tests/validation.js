@@ -7,7 +7,7 @@ var chai = require("chai"),
 
 var BaseFacade = require("../lib/facade/base");
 
-function testfunc(user_id) {
+function testfunc() {
     return true;
 }
 
@@ -57,7 +57,7 @@ UserFacade.prototype.get = function get(input) {
         default: [{
             "user_name": {
                 length: {
-                    args: [2,4]
+                    args: [2, 4]
                 },
                 required: true
             }
@@ -81,7 +81,9 @@ UserFacade.prototype.get = function get(input) {
                 custom: {
                     error_message: "Custom error message for field %s",
                     method: function(value) {
-                        if (value > 10) return false;
+                        if (value > 10) {
+                            return false;
+                        }
                         return true;
                     },
                 }
@@ -106,41 +108,41 @@ UserFacade.prototype.get3 = function get3(input) {
     this.rules = {
         custom: {
             async: [
-            
-            {
-                error_message: "testAsync failed",
-                method: function testAsync() {
-                    return new Promise(function(resolve) {
-                        console.log("testAsync");
-                        if (input.user_id > 5) {
-                            resolve(true);
-                            return;
-                        }
-                        else {
-                            resolve(false);
-                            return;
-                        }
-                    });
+                {
+                    error_message: "testAsync failed",
+                    method: function testAsync() {
+                        return new Promise(function(resolve) {
+                            console.log("testAsync");
+                            if (input.user_id > 5) {
+                                resolve(true);
+                                return;
+                            }
+                            else {
+                                resolve(false);
+                                return;
+                            }
+                        });
+                    }
+                }, {
+                    error_message: "testAsync2 failed",
+                    method: function testAsync2() {
+                        return new Promise(function(resolve) {
+                            console.log("testAsync2");
+                            if (input.user_name) {
+                                resolve(true);
+                                return;
+                            }
+                            else {
+                                resolve(false);
+                                return;
+                            }
+                        });
+                    }
                 }
-            },{
-                error_message: "testAsync2 failed",
-                method: function testAsync2() {
-                    return new Promise(function(resolve) {
-                        console.log("testAsync2");
-                        if (input.user_name) {
-                            resolve(true);
-                            return;
-                        }
-                        else {
-                            resolve(false);
-                            return;
-                        }
-                    });
-                }
-            }
             ]
         }
     };
+    
     return this.validate(input).then(function() {
         console.log("No error");
     });
@@ -163,7 +165,7 @@ describe("Validations", function() {
                 "lat": 90
             };
 
-            return uf.get(params).then(function(output) {
+            return uf.get(params).then(function() {
                 expect(false).to.be.true;
             }).done(null, function(error) {
                 // the expectation threw an error so forward that error to Mocha
@@ -181,7 +183,7 @@ describe("Validations", function() {
                 //"lat": 90
             };
 
-            return uf.get(params).then(function(output) {
+            return uf.get(params).then(function() {
                 expect(false).to.be.true;
             }).done(null, function(error) {
                 console.log("validation err: " + error);
@@ -197,7 +199,7 @@ describe("Validations", function() {
                 "lat": 90
             };
 
-            return uf.get(params).then(function(output) {
+            return uf.get(params).then(function() {
                 expect(false).to.be.true;
             }).done(null, function(error) {
                 console.log("validation err: " + error);
@@ -213,7 +215,7 @@ describe("Validations", function() {
                 "lat": 100
             };
 
-            return uf.get(params).then(function(output) {
+            return uf.get(params).then(function() {
                 expect(false).to.be.true;
             }).done(null, function(error) {
                 console.log("validation err: " + error);
@@ -230,7 +232,7 @@ describe("Validations", function() {
                 "lon": -360
             };
 
-            return uf.get(params).then(function(output) {
+            return uf.get(params).then(function() {
                 expect(false).to.be.true;
             }).done(null, function(error) {
                 console.log("validation err: " + error);
@@ -247,7 +249,7 @@ describe("Validations", function() {
                 "active": 1
             };
 
-            return uf.get(params).then(function(output) {
+            return uf.get(params).then(function() {
                 expect(false).to.be.true;
             }).done(null, function(error) {
                 console.log("validation err: " + error);
@@ -265,7 +267,7 @@ describe("Validations", function() {
                 "status": 20
             };
 
-            return uf.get(params).then(function(output) {
+            return uf.get(params).then(function() {
                 expect(false).to.be.true;
             }).done(null, function(error) {
                 console.log("validation err: " + error);
@@ -370,7 +372,7 @@ describe("Validations", function() {
                 expect(error).to.be.exist; // to fail test as it should not come in this callback
             });
         });
-        
+
         it("custom async validations failed", function() {
 
             var params = {

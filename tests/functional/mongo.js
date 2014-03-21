@@ -1,5 +1,4 @@
-﻿var _ = require("lodash"),
-    chai = require("chai"),
+var chai = require("chai"),
     chaiAsPromised = require("chai-as-promised"),
     expect = chai.expect;
    
@@ -12,7 +11,7 @@ describe("Mongo", function () {
         "Promise": require("bluebird")
     };
     var mongo = require("../../lib/models/mongo");
-    var functionalTestModel, mongoBaseModel;
+    var FunctionalTestModel, mongoBaseModel;
 
     before(function () {
         mongoBaseModel = mongo.initialize({
@@ -21,29 +20,29 @@ describe("Mongo", function () {
             db: "functionaltest"
         });
         console.log("init");
-        functionalTestModel = mongoBaseModel.extend({
+        FunctionalTestModel = mongoBaseModel.extend({
             tableName: "test"
         });
     });
 
     after(function () {
-        return new functionalTestModel().deleteAll().then(function () {
+        return new FunctionalTestModel().deleteAll().then(function () {
             return true;
         });
     });
     
     it("save", function () {
-        return new functionalTestModel({
+        return new FunctionalTestModel({
             _id: 1,
             name : "ftest1"
-        }).save().then(function (output) {
+        }).save().then(function () {
             expect(true).to.equal(true);
         });
        
     });
 
     it("fetch", function () {
-        return new functionalTestModel({
+        return new FunctionalTestModel({
             _id: 1
         }).fetch().then(function (output) {
             expect(output._id).to.equal(1);
@@ -54,7 +53,7 @@ describe("Mongo", function () {
     });
 
     it("fetch with select clause one parameter", function () {
-        return new functionalTestModel({
+        return new FunctionalTestModel({
             _id: 1
         }).fetch("_id").then(function (output) {
             expect(output._id).to.equal(1);
@@ -64,7 +63,7 @@ describe("Mongo", function () {
     });
 
     it("fetch with select clause multiple parameters", function () {
-        return new functionalTestModel({
+        return new FunctionalTestModel({
             _id: 1
         }).fetch("_id", "name").then(function (output) {
             expect(output._id).to.equal(1);
@@ -74,10 +73,10 @@ describe("Mongo", function () {
     });
 
     it("append single item to array", function () {
-        return new functionalTestModel({
+        return new FunctionalTestModel({
             array: "1"
-        }).appendArrayItems({ _id: 1 }).then(function (output) {
-            return new functionalTestModel({ _id: 1 })
+        }).appendArrayItems({ _id: 1 }).then(function () {
+            return new FunctionalTestModel({ _id: 1 })
                 .fetch()
                 .then(function (output) {
                     return output;
@@ -91,10 +90,10 @@ describe("Mongo", function () {
     });
 
     it("append multiple items to array", function () {
-        return new functionalTestModel({
+        return new FunctionalTestModel({
             array: ["2", "3"]
-        }).appendArrayItems({ _id: 1 }).then(function (output) {
-            return new functionalTestModel({ _id: 1 })
+        }).appendArrayItems({ _id: 1 }).then(function () {
+            return new FunctionalTestModel({ _id: 1 })
                 .fetch()
                 .then(function (output) {
                     return output;
@@ -108,10 +107,10 @@ describe("Mongo", function () {
     });
 
     it("append single item to array if not exist (should add)", function () {
-        return new functionalTestModel({
+        return new FunctionalTestModel({
             array: ["4"]
-        }).appendArrayItemsIfNotExist({ _id: 1 }).then(function (output) {
-            return new functionalTestModel({ _id: 1 })
+        }).appendArrayItemsIfNotExist({ _id: 1 }).then(function () {
+            return new FunctionalTestModel({ _id: 1 })
                 .fetch()
                 .then(function (output) {
                     return output;
@@ -125,10 +124,10 @@ describe("Mongo", function () {
     });
 
     it("append single item to array if not exist (should not add)", function () {
-        return new functionalTestModel({
+        return new FunctionalTestModel({
             array: ["4"]
-        }).appendArrayItemsIfNotExist({ _id: 1 }).then(function (output) {
-            return new functionalTestModel({ _id: 1 })
+        }).appendArrayItemsIfNotExist({ _id: 1 }).then(function () {
+            return new FunctionalTestModel({ _id: 1 })
                 .fetch()
                 .then(function (output) {
                     return output;
@@ -142,10 +141,10 @@ describe("Mongo", function () {
     });
 
     it("append multiple items to array if not exist (should add)", function () {
-        return new functionalTestModel({
+        return new FunctionalTestModel({
             array: ["5", "6"]
-        }).appendArrayItemsIfNotExist({ _id: 1 }).then(function (output) {
-            return new functionalTestModel({ _id: 1 })
+        }).appendArrayItemsIfNotExist({ _id: 1 }).then(function () {
+            return new FunctionalTestModel({ _id: 1 })
                 .fetch()
                 .then(function (output) {
                     return output;
@@ -159,10 +158,10 @@ describe("Mongo", function () {
     });
    
     it("append multiple items to array if not exist (should not add)", function () {
-        return new functionalTestModel({
+        return new FunctionalTestModel({
             array: ["5", "6"]
-        }).appendArrayItemsIfNotExist({ _id: 1 }).then(function (output) {
-            return new functionalTestModel({ _id: 1 })
+        }).appendArrayItemsIfNotExist({ _id: 1 }).then(function () {
+            return new FunctionalTestModel({ _id: 1 })
                 .fetch()
                 .then(function (output) {
                     return output;
