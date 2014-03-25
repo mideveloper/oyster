@@ -1,19 +1,12 @@
 // Mocha Validation tests
 
 require("../../components/index")();
-var Promise = global.Packages.Promise;
 var chai = require("chai"),
     expect = chai.expect;
 
 
 var Rules = require("../../lib/helpers/rules");
 var ValidationHelper = require("../../lib/helpers/validation");
-
-function testfunc() {
-    return true;
-}
-
-
 
 function validationRules() {
 
@@ -34,7 +27,7 @@ function validationRules() {
     }]);
     return rules;
 
-};
+}
 
 function get(input) {
 
@@ -88,7 +81,7 @@ function get(input) {
     return ValidationHelper.validate(input, new_rules).then(function () {
         console.log("No error");
     });
-};
+}
 
 describe("Validations", function() {
 
