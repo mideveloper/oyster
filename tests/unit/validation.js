@@ -1,11 +1,11 @@
 // Mocha Validation tests
 
-require("../components/index")();
+require("../../components/index")();
 var Promise = global.Packages.Promise;
 var chai = require("chai"),
     expect = chai.expect;
 
-var BaseFacade = require("../lib/facade/base");
+var BaseFacade = require("../../lib/facade/base");
 
 function testfunc() {
     return true;

@@ -10,6 +10,7 @@ function loadPackages(){
     packages.Bookshelf = require("bookshelf");
     packages.SCrypt = require("scrypt"); // only usable on linux environment
     packages.dateFormat = require("dateformat");
+    packages.Winston = require("winston");
     global.Packages = packages;
 }
 
