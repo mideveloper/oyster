@@ -173,4 +173,25 @@ describe("Mongo", function () {
         });
 
     });
+    
+    it("delete document based on criteria", function() {
+    
+        return new FunctionalTestModel({
+            _id: 2,
+            name: "ftest2"
+        }).save().then(function() {
+            return new FunctionalTestModel().deleteObject({
+                _id: 2
+            }).then(function() {
+                return new FunctionalTestModel().fetch({
+                    _id: 2
+                }).then(function(o) {
+                    expect(o).to.be.null;
+                });
+            }).done(null, function(err) {
+                console.log(err);
+                expect(err).to.not.exist;
+            });
+        });
+    });
 });
