@@ -173,4 +173,47 @@ describe("Mongo", function () {
         });
 
     });
+    
+        
+    it("remove items from array", function(){
+        return new FunctionalTestModel()
+        .removeArrayItems({array: "1"})
+        .then(function(){
+            return new FunctionalTestModel({_id: 1})
+            .fetch()
+            .then(function(o) {
+                console.log(o);
+                console.log("array length after remove: " + o.array.length);
+                expect(o.array.length).to.equal(5);
+            });
+        })
+        .done(null, function(err){
+            console.log(err);
+            expect(err).to.not.exist;
+        });
+    });
+    
+    it("delete document based on criteria", function() {
+    
+        return new FunctionalTestModel({
+            _id: 2,
+            name: "ftest2"
+        })
+        .save()
+        .then(function() {
+            return new FunctionalTestModel().deleteObject({
+                _id: 2
+            }).then(function() {
+                return new FunctionalTestModel().fetch({
+                    _id: 2
+                }).then(function(o) {
+                    expect(o).to.be.null;
+                });
+            }).done(null, function(err) {
+                console.log(err);
+                expect(err).to.not.exist;
+            });
+        });
+    });
+
 });
