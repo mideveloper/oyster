@@ -11,6 +11,8 @@ function loadPackages(){
     packages.SCrypt = require("scrypt"); // only usable on linux environment
     packages.dateFormat = require("dateformat");
     packages.Winston = require("winston");
+    packages.Hold = require("hold");
+    packages.Memcached = require("memcached");
     global.Packages = packages;
 }
 

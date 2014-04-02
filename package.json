@@ -24,7 +24,8 @@
     "bookshelf": "~0.6.4",
     "hold": "0.0.6",
     "elasticsearch": "~1.5.10",
-    "dateformat": "~1.0.7-1.2.3"
+    "dateformat": "~1.0.7-1.2.3",
+    "memcached": "~0.2.6"
   },
   "devDependencies": {
     "grunt-cli": "~0.1.11",
