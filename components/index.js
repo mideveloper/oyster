@@ -8,7 +8,7 @@ function loadPackages(){
     packages.Promise = require("bluebird");
     packages.lodash = require("lodash");
     packages.Bookshelf = require("bookshelf");
-    packages.SCrypt = require("scrypt"); // only usable on linux environment
+    //packages.SCrypt = require("scrypt"); // only usable on linux environment
     packages.dateFormat = require("dateformat");
     packages.Winston = require("winston");
     packages.Hold = require("hold");
