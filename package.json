@@ -16,11 +16,11 @@
     "mysql": "~2.0.0-rc2",
     "redis": "~0.9.1",
     "request": "~2.33.0",
-    "scrypt": "~1.7.4",
+    
     "socket.io": "~0.9.16",
     "winston": "~0.7.2",
     "grunt-shell": "~0.6.4",
-    "hashring": "~1.0.3",
+    
     "bookshelf": "~0.6.4",
     "hold": "0.0.6",
     "elasticsearch": "~1.5.10",
