@@ -13,6 +13,8 @@ function loadPackages(){
     packages.Winston = require("winston");
     packages.Hold = require("hold");
     packages.Memcached = require("memcached");
+    packages.Knex = require("knex");
+    
     global.Packages = packages;
 }
 
