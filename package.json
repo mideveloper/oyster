@@ -1,6 +1,6 @@
 {
   "name": "node-oyster",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "oyster",
   "main": "./lib/index.js",
   "scripts": {
@@ -70,6 +70,6 @@
   "homepage": "https://github.com/mideveloper/oyster",
   "readme": "oyster\n=====\n\noyster framework\n",
   "readmeFilename": "README.md",
-  "_id": "node-oyster@0.0.5",
+  "_id": "node-oyster@0.0.6",
   "_from": "node-oyster@"
 }
