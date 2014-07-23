@@ -56,8 +56,8 @@ describe("Mongo", function () {
         });
     });
     
-    it("updateRaw", function(){
-        return new FunctionalTestModel().update({_id : 1}, {name : "ftest1"}).then(function () {
+    it("rawUpdate", function(){
+        return new FunctionalTestModel().rawUpdate({_id : 1}, {name : "ftest1"}).then(function () {
             
             
             return new FunctionalTestModel({
