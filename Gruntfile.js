@@ -22,6 +22,7 @@ module.exports = function(grunt) {
                     "components/*.js",
                     "lib/**/*.js",
                     "tests/**/*.js",
+                    "tests/**/**/*.js",
                     "middleware/*.js"
                    
                 ]
@@ -36,7 +37,7 @@ module.exports = function(grunt) {
                 reporter: "dot"
             },
             all: {
-                src: ["tests/**/*.js"]
+                src: ["tests/**/*.js", "tests/**/**/*.js"]
             }
         },
         

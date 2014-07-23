@@ -31,6 +31,7 @@ describe("Mongo", function () {
         });
     });
     
+    
     it("save", function () {
         return new FunctionalTestModel({
             _id: 1,
@@ -39,6 +40,34 @@ describe("Mongo", function () {
             expect(true).to.equal(true);
         });
        
+    });
+    
+    it("update", function(){
+        return new FunctionalTestModel().update({_id : 1}, {name : "ftest2"}).then(function () {
+            
+            
+            return new FunctionalTestModel({
+                _id: 1
+            }).fetch().then(function (output) {
+                expect(output._id).to.equal(1);
+                expect(output.name).to.equal("ftest2");
+            
+            });
+        });
+    });
+    
+    it("updateRaw", function(){
+        return new FunctionalTestModel().update({_id : 1}, {name : "ftest1"}).then(function () {
+            
+            
+            return new FunctionalTestModel({
+                _id: 1
+            }).fetch().then(function (output) {
+                expect(output._id).to.equal(1);
+                expect(output.name).to.equal("ftest1");
+            
+            });
+        });
     });
 
     it("fetch", function () {
@@ -74,7 +103,7 @@ describe("Mongo", function () {
 
     it("append single item to array", function () {
         return new FunctionalTestModel({
-            array: "1"
+            test_array: "1"
         }).appendArrayItems({ _id: 1 }).then(function () {
             return new FunctionalTestModel({ _id: 1 })
                 .fetch()
@@ -83,7 +112,7 @@ describe("Mongo", function () {
                 });
 
         }).then(function (o) {
-            expect(o.array[0]).to.equal("1");
+            expect(o.test_array[0]).to.equal("1");
             
         });
 
@@ -91,7 +120,7 @@ describe("Mongo", function () {
 
     it("append multiple items to array", function () {
         return new FunctionalTestModel({
-            array: ["2", "3"]
+            test_array: ["2", "3"]
         }).appendArrayItems({ _id: 1 }).then(function () {
             return new FunctionalTestModel({ _id: 1 })
                 .fetch()
@@ -100,7 +129,7 @@ describe("Mongo", function () {
                 });
 
         }).then(function (o) {
-            expect(o.array[0]).to.equal("1");
+            expect(o.test_array[0]).to.equal("1");
 
         });
 
@@ -108,7 +137,7 @@ describe("Mongo", function () {
 
     it("append single item to array if not exist (should add)", function () {
         return new FunctionalTestModel({
-            array: ["4"]
+            test_array: ["4"]
         }).appendArrayItemsIfNotExist({ _id: 1 }).then(function () {
             return new FunctionalTestModel({ _id: 1 })
                 .fetch()
@@ -117,7 +146,7 @@ describe("Mongo", function () {
                 });
 
         }).then(function (o) {
-            expect(o.array.length).to.equal(4);
+            expect(o.test_array.length).to.equal(4);
 
         });
 
@@ -125,7 +154,7 @@ describe("Mongo", function () {
 
     it("append single item to array if not exist (should not add)", function () {
         return new FunctionalTestModel({
-            array: ["4"]
+            test_array: ["4"]
         }).appendArrayItemsIfNotExist({ _id: 1 }).then(function () {
             return new FunctionalTestModel({ _id: 1 })
                 .fetch()
@@ -134,7 +163,7 @@ describe("Mongo", function () {
                 });
 
         }).then(function (o) {
-            expect(o.array.length).to.equal(4);
+            expect(o.test_array.length).to.equal(4);
 
         });
 
@@ -142,7 +171,7 @@ describe("Mongo", function () {
 
     it("append multiple items to array if not exist (should add)", function () {
         return new FunctionalTestModel({
-            array: ["5", "6"]
+            test_array: ["5", "6"]
         }).appendArrayItemsIfNotExist({ _id: 1 }).then(function () {
             return new FunctionalTestModel({ _id: 1 })
                 .fetch()
@@ -151,7 +180,7 @@ describe("Mongo", function () {
                 });
 
         }).then(function (o) {
-            expect(o.array.length).to.equal(6);
+            expect(o.test_array.length).to.equal(6);
 
         });
 
@@ -159,7 +188,7 @@ describe("Mongo", function () {
    
     it("append multiple items to array if not exist (should not add)", function () {
         return new FunctionalTestModel({
-            array: ["5", "6"]
+            test_array: ["5", "6"]
         }).appendArrayItemsIfNotExist({ _id: 1 }).then(function () {
             return new FunctionalTestModel({ _id: 1 })
                 .fetch()
@@ -168,7 +197,7 @@ describe("Mongo", function () {
                 });
 
         }).then(function (o) {
-            expect(o.array.length).to.equal(6);
+            expect(o.test_array.length).to.equal(6);
 
         });
 

@@ -35,7 +35,8 @@ describe("Cache", function() {
                 return val;
             });
         }).then(function(val) {
-            expect(val).to.equal("bcd");
+            
+            return expect(val).to.equal("bcd");
         });
     });
 
@@ -56,6 +57,7 @@ describe("Cache", function() {
                 return val;
             });
         }).then(function(val) {
+            console.log(val);
             expect(val).to.equal("bcd");
         });
     });
