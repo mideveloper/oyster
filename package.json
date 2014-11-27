@@ -19,7 +19,7 @@
     "socket.io": "~0.9.16",
     "winston": "~0.7.2",
     "grunt-shell": "~0.6.4",
-    "bookshelf": "~0.6.4",
+    "bookshelf": "~0.7.9",
     "hold": "0.0.6",
     "elasticsearch": "~1.5.10",
     "dateformat": "~1.0.7-1.2.3",
