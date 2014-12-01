@@ -79,8 +79,8 @@ describe("Cache", function() {
     
     
     it("setAndGetMongocache", function() {
-        return memcache_Obj.set("abc", "bcd").then(function() {
-            return memcache_Obj.get("abc").then(function(val) {
+        return mongodbcache_Obj.set("abc", "bcd").then(function() {
+            return mongodbcache_Obj.get("abc").then(function(val) {
                 return val;
             });
         }).then(function(val) {
@@ -90,8 +90,9 @@ describe("Cache", function() {
     });
 
     it("removeMongocache", function() {
-        return memcache_Obj.remove("abc").then(function() {
-            return memcache_Obj.get("abc").then(function(val) {
+        return mongodbcache_Obj.remove("abc").then(function() {
+            return mongodbcache_Obj.get("abc").then(function(val) {
+                console.log(val);
                 return val;
             });
         }).then(function(val) {
