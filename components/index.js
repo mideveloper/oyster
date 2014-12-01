@@ -14,6 +14,7 @@ function loadPackages(){
     packages.Hold = require("hold");
     packages.Memcached = require("memcached");
     packages.Knex = require("knex");
+    packages.Apn = require("apn");
     
     global.Packages = packages;
 }

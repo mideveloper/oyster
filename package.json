@@ -7,6 +7,7 @@
     "test": "grunt test"
   },
   "dependencies": {
+    "apn": "~1.4.3",
     "bluebird": "~1.0.4",
     "knex": "~0.7.3",
     "lodash": "~2.4.1",
