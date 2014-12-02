@@ -15,7 +15,7 @@ describe("Notification", function() {
     var notification;
     before(function() {
         notification = new Notification();
-        notification.addIOSClient("../assets/client_stg_consumer_key.pem", "../assets/client_stg_consumer_cert.pem");
+        notification.addIOSClient("../assets/client_stg_consumer_key.pem", "../assets/client_stg_consumer_cert.pem","../assets/client_stg_consumer_key.pem", "../assets/client_stg_consumer_cert.pem");
         console.log("init");
 
     });
