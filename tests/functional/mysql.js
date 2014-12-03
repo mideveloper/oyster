@@ -1,5 +1,6 @@
 var chai = require("chai"),
     chaiAsPromised = require("chai-as-promised"),
+    Promise = require("bluebird"),
     expect = chai.expect;
 
 chai.use(chaiAsPromised);
@@ -42,6 +43,58 @@ describe("MySql", function() {
             expect(true).to.equal(true);
         });
 
+    });
+    
+    it("find", function(done) {
+    
+        var insert_obj = {};
+        insert_obj[idColumnName] = 1;
+        insert_obj[nameColumnName] = "ftest1";
+        insert_obj["search_column"] = "search me";
+    
+        var insert_obj2 = {};
+        insert_obj2[idColumnName] = 2;
+        insert_obj2[nameColumnName] = "ftest2";
+        insert_obj2["search_column"] = "search me";
+    
+        var insert_obj3 = {};
+        insert_obj3[idColumnName] = 3;
+        insert_obj3[nameColumnName] = "ftest3";
+        insert_obj3["search_column"] = "no search me 2";
+    
+        var insert_obj4 = {};
+        insert_obj4[idColumnName] = 4;
+        insert_obj4[nameColumnName] = "ftest4";
+        insert_obj4["search_column"] = "no search me 2";
+    
+        return Promise.all([
+            new FunctionalTestModel(insert_obj).save(),
+            new FunctionalTestModel(insert_obj2).save(),
+            new FunctionalTestModel(insert_obj3).save(),
+            new FunctionalTestModel(insert_obj4).save()
+        ]).spread(function() {
+            new FunctionalTestModel().find({
+                "search_column": "search me"
+            }).then(function(data) {
+                expect(data.length).to.equal(2);
+                done();
+            });
+        });
+    
+    });
+    
+    
+    it("pagedFind", function() {
+    
+    
+        return new FunctionalTestModel().pagedFind({
+            "search_column": "search me"
+        }, undefined, 0, 1).then(function(data) {
+            expect(data.length).to.equal(1);
+    
+        });
+    
+    
     });
 
     // it("saveInBatch", function () {
