@@ -1,8 +1,7 @@
 function loadPackages(){
     var packages = {};
-    
-    // all external packages should be initialized here
 
+    // all external packages should be initialized here
     // this will give us better control to manage exernal packages
 
     packages.Promise = require("bluebird");
@@ -13,9 +12,10 @@ function loadPackages(){
     packages.Winston = require("winston");
     packages.Hold = require("hold");
     packages.Memcached = require("memcached");
+    packages.Redis = require("redis");
     packages.Knex = require("knex");
     packages.Apn = require("apn");
-    
+
     global.Packages = packages;
 }
 
