@@ -64,13 +64,13 @@
   "author": {
     "name": "mideveloper"
   },
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/mideveloper/oyster/issues"
   },
   "homepage": "https://github.com/mideveloper/oyster",
   "readme": "oyster\n=====\n\noyster framework\n",
   "readmeFilename": "README.md",
-  "_id": "node-oyster@0.0.7",
+  "_id": "node-oyster@0.0.8",
   "_from": "node-oyster@"
 }
